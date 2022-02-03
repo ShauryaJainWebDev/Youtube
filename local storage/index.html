@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // what is local Storage?
+
+        //Local Storage is object or a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date.
+
+        //the data stored in the browser will persist even after the browser window is closed.
+
+        //Local Storage Methods:-
+
+        //1. setItem(key,value) 
+        // - It set the item in local Storage.
+        // - if key not exist in local Storage then it will create new key / value pair in local Storage.
+        // - if key exist in local Storage then it will update the value in Local Storage.
+        // - syntax :- localStorage.setItem(key,value);
+        // - @key should be string.
+        // - @value should be string.
+
+        //2. getItem(key) 
+        // - It return item from local Storage.
+        // - if key not exist in local Storage then it will return null.
+        // - if key exist in local Storage then it will return the value from Local Storage.
+        // - syntax :- localStorage.getItem(key);
+        // - @key should be string.
+
+        //3. removeItem(key) 
+        // - It remove the item from local Storage.
+        // - if key not exist in local Storage then it will do nothing.
+        // - if key exist in local Storage then it will remove key / value pair.
+        // - syntax :- localStorage.removeItem(key);
+        // - @key should be string.
+
+        //4. clear() 
+        // - It clear localStorage.
+        // - syntax :- localStorage.clear()
+
+        //there is some problem with LocalStorage is that it can't store Object.
+
+        //so there is one solution
+        //you can use JSON.stringify() to convert object into string.
+        //and you can use JSON.parse() to convert string into object.
+
+        //MORE DETAIL ABOUT JSON.stringify() AND JSON.parse() :-
+
+        // JSON.stringify()
+        // - it convert Array , Object into string.
+        // - if string is given then it will return string back.
+        // - syntax :- JSON.stringify(object);
+        // - syntax for localStorage :- localStorage.setItem(key,JSON.stringify(object))
+        // -    |-@object = your object here;
+        
+        //JSON.parse()
+        // - it convert string into object.
+        // - string should be valid (JSON.stringify)Object-string otherways show error.
+        // - syntax :- JSON.parse(valid string);
+        // - syntax for localStorage :- JSON.parse(localStorage.getItem(key));
+
+        //*********IMPORTANT*********//
+        //local Storage limit is 5MB.
+        //so you can store data more then 5MB in LocalStorage.
+
+
+    </script>
+</body>
+</html>
