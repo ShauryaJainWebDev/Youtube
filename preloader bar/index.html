@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+        }
+        .preloader{
+            width: 240px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .preloader .dot span{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+        .preloader .dot{
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+        }
+        .preloader .dot .down{
+            animation: down 2s ease-in-out infinite ;
+            opacity: .5;
+            animation-delay: calc(.1s*var(--p));
+        }
+        .preloader .dot .up{
+            animation: up 2s ease-in-out infinite ;
+            animation-delay: calc(.1s*var(--p));
+        }
+        
+        
+        
+        @keyframes down {
+            0%{
+                transform: translate(0px,0px);
+            }
+            25%{
+                transform: translate(0px,40px);
+                background-color: rgb(0, 17, 255);
+            }
+            50%{
+                transform: translate(0px,0px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+        @keyframes up {
+            0%{
+                transform: translate(0px,0px);
+            }
+            25%{
+                transform: translate(0px,-40px);
+                background-color: rgb(0, 17, 255);
+            }
+            50%{
+                transform: translate(0px,0px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="dot" style="--p:1">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:2">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:3">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:4">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:5">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:6">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:7">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:8">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:9">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        <div class="dot" style="--p:10">
+            <span class="up"></span>
+            <span class="down"></span>
+        </div>
+        
+    </div>
+    <h2>Loading</h2>
+</body>
+</html>
