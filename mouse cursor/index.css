@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    min-height:100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+}
+.pointer{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+}
+.pointer::before{
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    content: "";
+    transform: translateX(-30%) translateY(-30%);
+    opacity: .5;
+    animation: animate 1s linear infinite;
+    box-shadow: 0 0 30px 10px white;
+}
+@keyframes animate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+
+}
